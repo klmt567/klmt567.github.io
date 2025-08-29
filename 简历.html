@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林伟家 - 售后网络工程师简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        }
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            color: #333;
+            background-color: #fff;
+            line-height: 1.6;
+        }
+        /* 基础信息区域 */
+        .basic-header {
+            margin-bottom: 3rem;
+        }
+        .name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #000;
+        }
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem 2rem;
+            margin-bottom: 1rem;
+        }
+        .contact-list li {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .contact-list li span {
+            color: #666;
+            margin-right: 0.5rem;
+        }
+        .school-info {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 1rem;
+        }
+        .school-info strong {
+            color: #333;
+        }
+        .job-intention {
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* 模块通用样式 */
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #eee;
+            color: #000;
+        }
+
+        /* 个人技能 */
+        .skill-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .skill-list li {
+            background-color: #f5f5f5;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        /* 项目经历 */
+        .project-item {
+            margin-bottom: 1.8rem;
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        .project-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .project-tech {
+            font-size: 0.85rem;
+            color: #666;
+            display: flex;
+            gap: 0.8rem;
+        }
+        .project-content {
+            font-size: 0.95rem;
+            color: #444;
+            padding-left: 0.2rem;
+            line-height: 1.7;
+        }
+
+        /* 教育经历 */
+        .edu-content {
+            font-size: 0.95rem;
+        }
+        .edu-item {
+            margin-bottom: 1rem;
+        }
+        .edu-school {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+        .course-list {
+            list-style: disc;
+            list-style-position: inside;
+            color: #666;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+        }
+
+        /* 获奖证书 */
+        .cert-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .cert-list li {
+            font-size: 0.95rem;
+            background-color: #f9f9f9;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+        }
+
+        /* 性格爱好 */
+        .hobby-list {
+            list-style: none;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        .hobby-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        .hobby-list li::before {
+            content: "•";
+            color: #666;
+            margin-right: 0.5rem;
+            margin-top: 0.3rem;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 2rem 1rem;
+            }
+            .contact-list {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+            .skill-list, .cert-list {
+                gap: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 基础信息 -->
+    <div class="basic-header">
+        <h1 class="name">林伟家</h1>
+        <ul class="contact-list">
+            <li><span>电话：</span><a href="tel:139****4001" style="color: #333; text-decoration: none;">13950744001</a></li>
+            <li><span>邮箱：</span><a href="mailto:3293924170@qq.com" style="color: #333; text-decoration: none;">3293924170@qq.com</a></li>
+            <li><span>出生：</span>2001-09</li>
+            <li><span>籍贯：</span>福建莆田</li>
+        </ul>
+        <div class="school-info">
+            <strong>仰恩大学</strong> · 网络工程（本科）
+        </div>
+        <div class="job-intention">求职意向：售后网络工程师</div>
+    </div>
+
+    <!-- 个人技能 -->
+    <section class="section">
+        <h2 class="section-title">个人技能</h2>
+        <ul class="skill-list">
+            <li>华为/H3C 路由器/交换机配置</li>
+            <li>OSPF 路由协议部署与优化</li>
+            <li>跨子网故障排查（丢包/延迟）</li>
+            <li>Python（paramiko库）自动化脚本</li>
+            <li>设备日志分析与问题定位</li>
+            <li>Linux 基础操作</li>
+            <li>网络安全防护配置（NAT/VLAN）</li>
+            <li>AI工具（ChatGPT/Kimi）辅助故障分析</li>
+        </ul>
+    </section>
+
+    <!-- 项目经历 -->
+    <section class="section">
+        <h2 class="section-title">项目经历</h2>
+        <!-- 项目1 -->
+        <div class="project-item">
+            <div class="project-header">
+                <div class="project-name">福州万达广场网络设备自动化巡检项目</div>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>paramiko</span>
+                    <span>H3C设备</span>
+                    <span>CSV</span>
+                </div>
+            </div>
+            <div class="project-content">
+                针对人工登录H3C交换机/路由器巡检效率低、易遗漏故障的问题，编写Python自动化脚本实现多设备批量登录，自动执行巡检命令并导出CSV结果（异常项标红）；每周生成巡检报告，统计接口故障率与设备资源使用率并提出优化建议，完全替代人工操作，提升排查效率约60%。
+            </div>
+        </div>
+        <!-- 项目2 -->
+        <div class="project-item">
+            <div class="project-header">
+                <div class="project-name">泉州某贸易公司局域网搭建项目</div>
+                <div class="project-tech">
+                    <span>VLAN划分</span>
+                    <span>NAT转换</span>
+                    <span>PPPoE拨号</span>
+                    <span>访问控制</span>
+                </div>
+            </div>
+            <div class="project-content">
+                参与新办公场地局域网全流程搭建：配置交换机划分VLAN并分配IP段/指定DNS，通过PPPoE拨号+静态IP接入外网，配置NAT实现内网终端上网；搭建安全规则禁止财务部访问外网，完成设备部署与连通性测试，满足15+员工办公需求，保障网络隔离与数据安全。
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育经历 -->
+    <section class="section">
+        <h2 class="section-title">教育经历</h2>
+        <div class="edu-content">
+            <div class="edu-item">
+                <div class="edu-school">仰恩大学 · 网络工程（本科）</div>
+                <div class="edu-courses">
+                    <strong>主修课程：</strong>
+                    <ul class="course-list">
+                        <li>计算机网络原理</li>
+                        <li>网络攻击与防护</li>
+                        <li>路由交换技术</li>
+                        <li>网络工程设计</li>
+                        <li>Linux基础</li>
+                        <li>数据库原理及应用</li>
+                        <li>网络工程师职业技能</li>
+                        <li>数据结构</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 获奖证书 -->
+    <section class="section">
+        <h2 class="section-title">获奖证书</h2>
+        <ul class="cert-list">
+            <li>软考中级 · 网络工程师证书</li>
+            <li>H3CIE（笔试+实验）通过</li>
+            <li>东方财富金融挑战赛 国赛三等奖</li>
+            <li>东方财富ETF挑战赛 二等奖</li>
+            <li>广发证券杯 一等奖</li>
+            <li>华三杯 省赛二等奖</li>
+            <li>C1驾驶证</li>
+        </ul>
+    </section>
+
+    <!-- 性格爱好 -->
+    <section class="section">
+        <h2 class="section-title">性格爱好</h2>
+        <ul class="hobby-list">
+            <li>积极探索新技术/新理念，定期查看行业周刊与技术论坛，关注多领域发展方向。</li>
+            <li>具备团队协作能力，在校期间担任前端小组作业组长，协调成员配合完成教学要求，取得优异成绩。</li>
+            <li>业余研究数码产品（经手25+台手机/平板/网络设备），关注硬件参数与网络性能的关联逻辑。</li>
+            <li>通过数据分析优化内容发布，在哔哩哔哩积累近2000粉丝，培养结构化思维与跨平台沟通能力。</li>
+        </ul>
+    </section>
+</body>
+</html>
