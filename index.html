@@ -13,13 +13,13 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
             line-height: 1.7;
-            padding: 2rem;
+            padding: 1.5rem;
             transition: background 0.3s, color 0.3s;
         }
         .container {
             max-width: 860px;
             margin: auto;
-            padding: 3rem 2.5rem;
+            padding: 2.5rem 3rem; /* 增加左右内边距 */
             border-radius: 14px;
             background: #fff;
             box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -31,37 +31,37 @@
             background: #f0f2f5;
             color: #333;
         }
-        .light .name { color: #0d1b2a; }
+        .light .container { background: #fff; }
         .light .section-title { color: #222; border-left: 5px solid #1a73e8; }
         .light .skill-list li, .light .cert-list li { background: #f0f6ff; color: #0d1b2a; }
         .light .hobby-list li::before { color: #1a73e8; }
 
-        /* 深色主题优化 */
+        /* 深色主题增加灰色层次 */
         body.dark {
-            background: #e5e7eb;
-            color: #333;
+            background: #d1d5db;
+            color: #111;
         }
         .dark .container {
-            background: #ffffff;
-            color: #333;
+            background: #f9fafb;
+            color: #111;
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
-        .dark .name { color: #111827; }
         .dark .section-title { color: #111827; border-left: 5px solid #2563eb; }
-        .dark .skill-list li, .dark .cert-list li { background: #f3f4f6; color: #111827; }
+        .dark .skill-list li, .dark .cert-list li { background: #e5e7eb; color: #111827; }
         .dark .hobby-list li::before { color: #2563eb; }
 
-        /* 打印样式 */
+        /* 打印与 PDF 样式 */
         @media print {
             body {
                 background: #fff !important;
                 color: #000 !important;
-                padding: 0;
+                padding: 1rem;
             }
             .container {
                 box-shadow: none !important;
                 background: #fff !important;
-                padding: 2rem;
+                padding: 2rem 1.5rem;
+                max-width: 100%;
             }
             .theme-toggle, .download-btn { display: none; }
         }
@@ -90,32 +90,57 @@
         /* 模块 */
         .section { margin-bottom: 2.8rem; }
         .section-title { font-size: 1.35rem; font-weight: 700; margin-bottom: 1.2rem; padding-left: 0.6rem; }
+        
+        /* 正文整体缩进，避免贴边 */
+        .section-content { padding-left: 0.8rem; }
         .skill-list, .cert-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.8rem; }
         .skill-list li, .cert-list li { padding: 0.45rem 0.9rem; border-radius: 6px; font-size: 0.95rem; font-weight: 500; }
-        .project-item { margin-bottom: 2rem; }
+        
+        /* 项目经历 */
+        .project-item { margin-bottom: 2rem; padding-left: 0.8rem; }
         .project-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
         .project-name { font-size: 1.1rem; font-weight: 600; }
         .project-tech { font-size: 0.85rem; display: flex; gap: 0.8rem; }
-        .project-content { font-size: 0.95rem; line-height: 1.7; }
-        .edu-school { font-weight: 600; margin-bottom: 0.3rem; }
-        .course-list { list-style: disc; list-style-position: inside; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
-        .hobby-list { list-style: none; font-size: 0.95rem; }
+        .project-content { font-size: 0.95rem; line-height: 1.7; padding-left: 1rem; }
+
+        /* 教育经历 */
+        .edu-item { padding-left: 0.8rem; }
+        .course-list { padding-left: 1.2rem; list-style: disc; list-style-position: inside; font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+
+        /* 荣誉证书 */
+        .cert-list { padding-left: 0.8rem; }
+
+        /* 爱好 */
+        .hobby-list { list-style: none; font-size: 0.95rem; padding-left: 0.8rem; }
         .hobby-list li { margin-bottom: 0.6rem; display: flex; align-items: flex-start; }
         .hobby-list li::before { content: "➤"; margin-right: 0.5rem; margin-top: 0.1rem; font-size: 0.85rem; }
 
         /* 按钮 */
         .theme-toggle, .download-btn {
             position: fixed;
-            top: 1rem;
+            bottom: 1rem;
+            right: 1rem;
             padding: 0.5rem 1rem;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             font-size: 0.9rem;
             color: #fff;
+            z-index: 999;
         }
-        .theme-toggle { right: 1rem; background: #1a73e8; }
-        .download-btn { right: 7rem; background: #10b981; }
+        .theme-toggle { background: #1a73e8; margin-bottom: 2.5rem; }
+        .download-btn { background: #10b981; }
+
+        /* 手机端优化 */
+        @media (max-width: 600px) {
+            body { padding: 1rem; }
+            .container { padding: 1.5rem; }
+            .name { font-size: 1.8rem; }
+            .contact-list { flex-direction: column; gap: 0.5rem; font-size: 0.85rem; }
+            .section-title { font-size: 1.1rem; }
+            .skill-list li, .cert-list li { font-size: 0.85rem; padding: 0.35rem 0.7rem; }
+            .project-name { font-size: 1rem; }
+        }
     </style>
 </head>
 <body class="light">
@@ -138,47 +163,51 @@
         <!-- 个人技能 -->
         <section class="section">
             <h2 class="section-title">核心技能</h2>
-            <ul class="skill-list">
-                <li>华为/H3C 路由器交换机配置</li>
-                <li>OSPF 路由协议部署与优化</li>
-                <li>跨子网故障排查（丢包/延迟）</li>
-                <li>Python 自动化脚本（Paramiko）</li>
-                <li>日志分析与问题定位</li>
-                <li>Linux 基础运维</li>
-                <li>网络安全策略配置（NAT/VLAN）</li>
-                <li>AI 工具辅助故障分析</li>
-            </ul>
+            <div class="section-content">
+                <ul class="skill-list">
+                    <li>华为/H3C 路由器交换机配置</li>
+                    <li>OSPF 路由协议部署与优化</li>
+                    <li>跨子网故障排查（丢包/延迟）</li>
+                    <li>Python 自动化脚本（Paramiko）</li>
+                    <li>日志分析与问题定位</li>
+                    <li>Linux 基础运维</li>
+                    <li>网络安全策略配置（NAT/VLAN）</li>
+                    <li>AI 工具辅助故障分析</li>
+                </ul>
+            </div>
         </section>
 
         <!-- 项目经历 -->
         <section class="section">
             <h2 class="section-title">项目经验</h2>
-            <div class="project-item">
-                <div class="project-header">
-                    <div class="project-name">福州万达广场网络设备自动化巡检</div>
-                    <div class="project-tech"><span>Python</span><span>Paramiko</span><span>H3C设备</span><span>CSV</span></div>
+            <div class="section-content">
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-name">福州万达广场网络设备自动化巡检</div>
+                        <div class="project-tech"><span>Python</span><span>Paramiko</span><span>H3C设备</span><span>CSV</span></div>
+                    </div>
+                    <div class="project-content">
+                        设计并实现自动化巡检脚本，替代人工登录 H3C 设备执行命令：
+                        <ul>
+                            <li>批量登录设备并收集巡检数据，异常项自动标红导出 CSV</li>
+                            <li>自动生成周报，统计接口故障率及资源使用情况</li>
+                            <li>整体提升巡检效率约 60%，有效减少人工遗漏</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="project-content">
-                    设计并实现自动化巡检脚本，替代人工登录 H3C 设备执行命令：
-                    <ul>
-                        <li>批量登录设备并收集巡检数据，异常项自动标红导出 CSV</li>
-                        <li>自动生成周报，统计接口故障率及资源使用情况</li>
-                        <li>整体提升巡检效率约 60%，有效减少人工遗漏</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="project-item">
-                <div class="project-header">
-                    <div class="project-name">泉州某贸易公司局域网搭建</div>
-                    <div class="project-tech"><span>VLAN</span><span>NAT</span><span>PPPoE</span><span>ACL</span></div>
-                </div>
-                <div class="project-content">
-                    负责新办公场地局域网规划与实施：
-                    <ul>
-                        <li>配置交换机 VLAN 划分，分配 IP 段与 DNS</li>
-                        <li>配置 NAT 与 PPPoE 接入，保障全员上网需求</li>
-                        <li>制定访问控制策略，隔离财务网络，提升数据安全</li>
-                    </ul>
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-name">泉州某贸易公司局域网搭建</div>
+                        <div class="project-tech"><span>VLAN</span><span>NAT</span><span>PPPoE</span><span>ACL</span></div>
+                    </div>
+                    <div class="project-content">
+                        负责新办公场地局域网规划与实施：
+                        <ul>
+                            <li>配置交换机 VLAN 划分，分配 IP 段与 DNS</li>
+                            <li>配置 NAT 与 PPPoE 接入，保障全员上网需求</li>
+                            <li>制定访问控制策略，隔离财务网络，提升数据安全</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -186,20 +215,22 @@
         <!-- 教育经历 -->
         <section class="section">
             <h2 class="section-title">教育背景</h2>
-            <div class="edu-item">
-                <div class="edu-school">仰恩大学 · 网络工程（本科）</div>
-                <div class="edu-courses">
-                    <strong>主修课程：</strong>
-                    <ul class="course-list">
-                        <li>计算机网络原理</li>
-                        <li>网络攻击与防护</li>
-                        <li>路由交换技术</li>
-                        <li>网络工程设计</li>
-                        <li>Linux基础</li>
-                        <li>数据库原理及应用</li>
-                        <li>网络工程师职业技能</li>
-                        <li>数据结构</li>
-                    </ul>
+            <div class="section-content">
+                <div class="edu-item">
+                    <div class="edu-school">仰恩大学 · 网络工程（本科）</div>
+                    <div class="edu-courses">
+                        <strong>主修课程：</strong>
+                        <ul class="course-list">
+                            <li>计算机网络原理</li>
+                            <li>网络攻击与防护</li>
+                            <li>路由交换技术</li>
+                            <li>网络工程设计</li>
+                            <li>Linux基础</li>
+                            <li>数据库原理及应用</li>
+                            <li>网络工程师职业技能</li>
+                            <li>数据结构</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -207,26 +238,30 @@
         <!-- 获奖证书 -->
         <section class="section">
             <h2 class="section-title">专业证书与荣誉</h2>
-            <ul class="cert-list">
-                <li>软考中级 · 网络工程师证书</li>
-                <li>H3CIE（笔试+实验）通过</li>
-                <li>东方财富金融挑战赛 国赛三等奖</li>
-                <li>东方财富ETF挑战赛 二等奖</li>
-                <li>广发证券杯 一等奖</li>
-                <li>华三杯 省赛二等奖</li>
-                <li>C1 驾驶证</li>
-            </ul>
+            <div class="section-content">
+                <ul class="cert-list">
+                    <li>软考中级 · 网络工程师证书</li>
+                    <li>H3CIE（笔试+实验）通过</li>
+                    <li>东方财富金融挑战赛 国赛三等奖</li>
+                    <li>东方财富ETF挑战赛 二等奖</li>
+                    <li>广发证券杯 一等奖</li>
+                    <li>华三杯 省赛二等奖</li>
+                    <li>C1 驾驶证</li>
+                </ul>
+            </div>
         </section>
 
         <!-- 性格爱好 -->
         <section class="section">
             <h2 class="section-title">个人特质与兴趣</h2>
-            <ul class="hobby-list">
-                <li>积极探索新技术，定期学习行业发展与前沿趋势</li>
-                <li>具备团队协作与沟通能力，曾担任小组组长完成课程项目</li>
-                <li>热衷研究数码设备，关注网络性能与硬件优化</li>
-                <li>运营 B 站账号，积累 2000+ 粉丝，培养结构化思维与跨平台沟通力</li>
-            </ul>
+            <div class="section-content">
+                <ul class="hobby-list">
+                    <li>积极探索新技术，定期学习行业发展与前沿趋势</li>
+                    <li>具备团队协作与沟通能力，曾担任小组组长完成课程项目</li>
+                    <li>热衷研究数码设备，关注网络性能与硬件优化</li>
+                    <li>运营 B 站账号，积累 2000+ 粉丝，培养结构化思维与跨平台沟通力</li>
+                </ul>
+            </div>
         </section>
     </div>
 
